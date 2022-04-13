@@ -46,11 +46,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.0015 0 0.0515"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://xarm_gripper/meshes/base_link_collision.STL" />
+        <box size="0.053 0.12 0.103"/>
       </geometry>
     </collision>
   </link>
@@ -84,11 +83,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0.015 0.02"
+        rpy="0.48 0 0" />
       <geometry>
-        <mesh
-          filename="package://xarm_gripper/meshes/left_outer_knuckle.STL" />
+        <box size="0.012 0.069 0.033"/>
       </geometry>
     </collision>
   </link>
@@ -140,11 +138,18 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 -0.019 0.04"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://xarm_gripper/meshes/left_finger.STL" />
+        <box size="0.032 0.014 0.042"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0 -0.008 0.008"
+        rpy="0.8 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.036"/>
       </geometry>
     </collision>
   </link>
@@ -197,11 +202,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0.016 0.02"
+        rpy="-0.7 0 0" />
       <geometry>
-        <mesh
-          filename="package://xarm_gripper/meshes/left_inner_knuckle.STL" />
+        <box size="0.027 0.012 0.061"/>
       </geometry>
     </collision>
   </link>
@@ -254,11 +258,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 -0.015 0.02"
+        rpy="-0.48 0 0" />
       <geometry>
-        <mesh
-          filename="package://xarm_gripper/meshes/right_outer_knuckle.STL" />
+        <box size="0.012 0.069 0.033"/>
       </geometry>
     </collision>
   </link>
@@ -311,11 +314,18 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0.019 0.04"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://xarm_gripper/meshes/right_finger.STL" />
+        <box size="0.032 0.014 0.042"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0 0.008 0.008"
+        rpy="-0.8 0 0" />
+      <geometry>
+        <box size="0.016 0.012 0.036"/>
       </geometry>
     </collision>
   </link>
@@ -368,11 +378,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 -0.016 0.02"
+        rpy="0.7 0 0" />
       <geometry>
-        <mesh
-          filename="package://xarm_gripper/meshes/right_inner_knuckle.STL" />
+        <box size="0.027 0.012 0.061"/>
       </geometry>
     </collision>
   </link>
