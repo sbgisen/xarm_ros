@@ -64,7 +64,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/xarm7/visual/link_base.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link_base.STL" />
       </geometry>
     </collision>
   </link>
@@ -100,7 +100,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/xarm7/visual/link1.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link1.STL" />
       </geometry>
     </collision>
   </link>
@@ -157,7 +157,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/xarm7/visual/link2.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link2.STL" />
       </geometry>
     </collision>
   </link>
@@ -214,7 +214,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/xarm7/visual/link3.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link3.STL" />
       </geometry>
     </collision>
   </link>
@@ -271,7 +271,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/xarm7/visual/link4.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link4.STL" />
       </geometry>
     </collision>
   </link>
@@ -328,7 +328,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/xarm7/visual/link5.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link5.STL" />
       </geometry>
     </collision>
   </link>
@@ -385,7 +385,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/xarm7/visual/link6.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link6.STL" />
       </geometry>
     </collision>
   </link>
@@ -442,7 +442,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xarm_description/meshes/collision/end_tool.STL" />
+          filename="package://xarm_description/meshes/xarm7/collision/link7.STL" />
       </geometry>
     </collision>
   </link>
