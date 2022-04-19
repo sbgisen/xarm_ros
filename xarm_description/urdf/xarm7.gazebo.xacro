@@ -35,6 +35,34 @@
       <selfCollide>false</selfCollide>
     </gazebo>
 
+    <gazebo reference="${prefix}joint1">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint2">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint3">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint4">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint5">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint6">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint7">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
   </xacro:macro>
 
 </robot>
