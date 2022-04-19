@@ -122,8 +122,8 @@
       effort="42"
       velocity="3.14" />
     <dynamics
-      damping="10"
-      friction="1" />
+      damping="1.0"
+      friction="0" />
   </joint>
   <link
     name="${prefix}link2">
@@ -179,8 +179,8 @@
       effort="42"
       velocity="3.14" />
     <dynamics
-      damping="10"
-      friction="1" />
+      damping="1.0"
+      friction="0" />
   </joint>
   <link
     name="${prefix}link3">
@@ -236,8 +236,8 @@
       effort="19"
       velocity="3.14" />
     <dynamics
-      damping="5"
-      friction="1" />
+      damping="1.0"
+      friction="0" />
   </joint>
   <link
     name="${prefix}link4">
@@ -293,8 +293,8 @@
       effort="19"
       velocity="3.14" />
     <dynamics
-      damping="5"
-      friction="1" />
+      damping="1.0"
+      friction="0" />
   </joint>
   <link
     name="${prefix}link5">
@@ -350,8 +350,8 @@
       effort="19"
       velocity="3.14" />
     <dynamics
-      damping="5"
-      friction="1" />
+      damping="1.0"
+      friction="0" />
   </joint>
   <link
     name="${prefix}link6">
@@ -407,8 +407,8 @@
       effort="7"
       velocity="3.14" />
     <dynamics
-      damping="2"
-      friction="1" />
+      damping="1.0"
+      friction="0" />
   </joint>
   <link
     name="${prefix}link7">
@@ -464,8 +464,8 @@
       effort="7"
       velocity="3.14" />
     <dynamics
-      damping="2"
-      friction="1" />
+      damping="1.0"
+      friction="0" />
   </joint>
 
   <xacro:if value="${rs_d435i}">
