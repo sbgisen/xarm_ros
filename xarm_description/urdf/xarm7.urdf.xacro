@@ -119,7 +119,7 @@
     <limit
       lower="${joint1_lower_limit}"
       upper="${joint1_upper_limit}"
-      effort="50"
+      effort="42"
       velocity="3.14" />
     <dynamics
       damping="10"
@@ -176,7 +176,7 @@
     <limit
       lower="${joint2_lower_limit}"
       upper="${joint2_upper_limit}"
-      effort="50"
+      effort="42"
       velocity="3.14" />
     <dynamics
       damping="10"
@@ -233,7 +233,7 @@
     <limit
       lower="${joint3_lower_limit}"
       upper="${joint3_upper_limit}"
-      effort="30"
+      effort="19"
       velocity="3.14" />
     <dynamics
       damping="5"
@@ -290,7 +290,7 @@
     <limit
       lower="${joint4_lower_limit}"
       upper="${joint4_upper_limit}"
-      effort="30"
+      effort="19"
       velocity="3.14" />
     <dynamics
       damping="5"
@@ -347,7 +347,7 @@
     <limit
       lower="${joint5_lower_limit}"
       upper="${joint5_upper_limit}"
-      effort="30"
+      effort="19"
       velocity="3.14" />
     <dynamics
       damping="5"
@@ -404,7 +404,7 @@
     <limit
       lower="${joint6_lower_limit}"
       upper="${joint6_upper_limit}"
-      effort="20"
+      effort="7"
       velocity="3.14" />
     <dynamics
       damping="2"
@@ -461,7 +461,7 @@
     <limit
       lower="${joint7_lower_limit}"
       upper="${joint7_upper_limit}"
-      effort="20"
+      effort="7"
       velocity="3.14" />
     <dynamics
       damping="2"
