@@ -10,7 +10,8 @@
     geometry_mesh_origin_xyz:='0 0 0'
     geometry_mesh_origin_rpy:='0 0 0'
     geometry_mesh_tcp_xyz:='0 0 0'
-    geometry_mesh_tcp_rpy:='0 0 0' ">  
+    geometry_mesh_tcp_rpy:='0 0 0' ">
+    <xacro:property name="pi" value="3.1415" />
 
     <!-- xarm7 -->
     <xacro:include filename="$(find xarm_description)/urdf/xarm7.urdf.xacro" />
