@@ -4,35 +4,63 @@
   <xacro:macro name="xarm7_gazebo" params="prefix">
 
     <gazebo reference="${prefix}link_base">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}link1">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}link2">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}link3">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}link4">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}link5">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}link6">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
     </gazebo>
 
     <gazebo reference="${prefix}link7">
-      <selfCollide>true</selfCollide>
+      <selfCollide>false</selfCollide>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint1">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint2">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint3">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint4">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint5">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint6">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}joint7">
+      <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
   </xacro:macro>
