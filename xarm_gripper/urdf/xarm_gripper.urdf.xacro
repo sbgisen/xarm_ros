@@ -237,6 +237,27 @@
       friction="0" />
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
+  <gazebo> 
+    <joint name="${prefix}left_loop_joint" type="revolute"> 
+      <parent>${prefix}left_inner_knuckle</parent> 
+      <child>${prefix}left_finger</child> 
+      <pose>0 -0.015 0.015 0 0 0</pose> 
+      <axis> 
+        <xyz>1 0 0</xyz> 
+        <use_parent_model_frame>true</use_parent_model_frame> 
+      </axis> 
+      <physics> 
+        <ode> 
+          <implicit_spring_damper>1</implicit_spring_damper> 
+          <cfm_damping>0</cfm_damping> 
+          <limit> 
+            <cfm>1e-7</cfm> 
+            <erp>0.8</erp> 
+          </limit> 
+        </ode> 
+      </physics> 
+    </joint> 
+  </gazebo> 
   <link
     name="${prefix}right_outer_knuckle">
     <inertial>
@@ -422,7 +443,27 @@
       friction="0" />
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
-
+  <gazebo> 
+    <joint name="${prefix}right_loop_joint" type="revolute"> 
+      <parent>${prefix}right_inner_knuckle</parent> 
+      <child>${prefix}right_finger</child> 
+      <pose>0 0.015 0.015 0 0 0</pose> 
+      <axis> 
+        <xyz>1 0 0</xyz> 
+        <use_parent_model_frame>true</use_parent_model_frame> 
+      </axis> 
+      <physics> 
+        <ode> 
+          <implicit_spring_damper>1</implicit_spring_damper> 
+          <cfm_damping>0</cfm_damping> 
+          <limit> 
+            <cfm>1e-7</cfm> 
+            <erp>0.8</erp> 
+          </limit> 
+        </ode> 
+      </physics> 
+    </joint> 
+  </gazebo> 
   <link name="${prefix}link_tcp" />
 
   <joint
