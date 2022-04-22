@@ -94,6 +94,30 @@
       <selfCollide>false</selfCollide>
     </gazebo>
 
+    <gazebo reference="${prefix}drive_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}left_finger_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}left_inner_knuckle_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}right_outer_knuckle_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}right_finger_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
+    <gazebo reference="${prefix}right_inner_knuckle_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
+    </gazebo>
+
   </xacro:macro>
 
 </robot>

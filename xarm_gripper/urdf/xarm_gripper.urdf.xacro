@@ -107,6 +107,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
+    <dynamics
+      damping="1.0"
+      friction="0" />
   </joint>
   <link
     name="${prefix}left_finger">
@@ -170,6 +173,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
+    <dynamics
+      damping="1.0"
+      friction="0" />
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -226,6 +232,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
+    <dynamics
+      damping="1.0"
+      friction="0" />
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -282,6 +291,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
+    <dynamics
+      damping="1.0"
+      friction="0" />
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -346,6 +358,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
+    <dynamics
+      damping="1.0"
+      friction="0" />
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -402,6 +417,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
+    <dynamics
+      damping="1.0"
+      friction="0" />
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
 
