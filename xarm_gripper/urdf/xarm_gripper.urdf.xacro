@@ -246,7 +246,7 @@
         <pose>0 -0.015 0.015 0 0 0</pose>
         <axis>
           <xyz>1 0 0</xyz>
-          <use_parent_model_frame>true</use_parent_model_frame>
+          <use_parent_model_frame>false</use_parent_model_frame>
         </axis>
         <physics>
           <ode>
@@ -456,7 +456,7 @@
         <pose>0 0.015 0.015 0 0 0</pose> 
         <axis> 
           <xyz>1 0 0</xyz> 
-          <use_parent_model_frame>true</use_parent_model_frame> 
+          <use_parent_model_frame>false</use_parent_model_frame> 
         </axis> 
         <physics> 
           <ode> 
