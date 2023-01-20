@@ -18,7 +18,7 @@ namespace xarm_api
     public:
         XArmDriver():spinner_(4){ spinner_.start(); };
         ~XArmDriver();
-        void init(ros::NodeHandle& root_nh, std::string &server_ip);
+        void init(ros::NodeHandle& root_nh, std::string& server_ip, bool publish_joint_states=true);
 
         // provide a list of services:
         bool MotionCtrlCB(xarm_msgs::SetAxis::Request &req, xarm_msgs::SetAxis::Response &res);
@@ -124,6 +124,7 @@ namespace xarm_api
         float init_gripper_pos_;
         bool gripper_init_loop_;
         bool gripper_added_;
+        bool publish_joint_states_;
 
         ros::NodeHandle nh_;
         ros::ServiceServer go_home_server_;

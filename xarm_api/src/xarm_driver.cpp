@@ -212,7 +212,8 @@ namespace xarm_api
         xarm_state_msg_.angle.resize(dof_);
 
         // state feedback topics:
-        joint_state_ = nh_.advertise<sensor_msgs::JointState>("joint_states", 10, true);
+        if(publish_joint_states_)
+            joint_state_ = nh_.advertise<sensor_msgs::JointState>("joint_states", 10, true);
         robot_rt_state_ = nh_.advertise<xarm_msgs::RobotMsg>("xarm_states", 10, true);
         cgpio_state_ = nh_.advertise<xarm_msgs::CIOState>("xarm_cgpio_states", 10, true);
         // ftsensor_state_ = nh_.advertise<geometry_msgs::WrenchStamped>("xarm_ftsensor_states", 10, true);
@@ -236,10 +237,11 @@ namespace xarm_api
         nh_.getParam("xarm_report_type", report_type_);
     }
 
-    void XArmDriver::init(ros::NodeHandle& root_nh, std::string &server_ip)
-    {   
+    void XArmDriver::init(ros::NodeHandle& root_nh, std::string &server_ip, bool publish_joint_states)
+    {
+        publish_joint_states_ = publish_joint_states;
         nh_ = root_nh;
-        
+
         bool baud_checkset = true;
         if (nh_.hasParam("baud_checkset")) {
             nh_.getParam("baud_checkset", baud_checkset);
@@ -1325,7 +1327,8 @@ namespace xarm_api
     
     void XArmDriver::pub_joint_state(sensor_msgs::JointState &js_msg)
     {
-        joint_state_.publish(js_msg);
+        if(publish_joint_states_)
+            joint_state_.publish(js_msg);
     }
 
     void XArmDriver::pub_cgpio_state(xarm_msgs::CIOState &cio_msg)
