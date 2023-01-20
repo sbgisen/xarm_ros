@@ -86,6 +86,8 @@ namespace xarm_api
 
         bool is_connected(void);
 
+        sensor_msgs::JointState getGripperJointStates();
+
     private:
         void _report_connect_changed_callback(bool connected, bool reported);
         void _report_data_callback(XArmReportData *report_data_ptr);

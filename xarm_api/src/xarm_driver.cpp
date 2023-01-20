@@ -361,6 +361,11 @@ namespace xarm_api
         pub_joint_state(gripper_joint_state_msg_);
     }
 
+    sensor_msgs::JointState XArmDriver::getGripperJointStates()
+    {
+        return gripper_joint_state_msg_;
+    }
+
     void XArmDriver::_handle_gripper_action_goal(actionlib::ActionServer<control_msgs::GripperCommandAction>::GoalHandle gh)
     {
         gripper_init_loop_ = true;
