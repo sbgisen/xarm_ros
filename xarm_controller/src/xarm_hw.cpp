@@ -82,9 +82,9 @@ namespace xarm_control
 		velocity_cmds_.resize(dof_);
 		effort_cmds_.resize(dof_);
 
-		position_states_.resize(dof_);
-		velocity_states_.resize(dof_);
-		effort_states_.resize(dof_);
+		position_states_.resize(jnt_names_.size());
+		velocity_states_.resize(jnt_names_.size());
+		effort_states_.resize(jnt_names_.size());
 
 		curr_err_ = 0;
 		curr_state_ = 4;
@@ -121,7 +121,14 @@ namespace xarm_control
 				break;
 			}
 			_register_joint_limits(root_nh, jnt_names_[j], ctrl_method_);
-	  	}
+		}
+		if(has_gripper_){
+			for (auto j = dof_; j < jnt_names_.size(); j++)
+			{
+				js_interface_.registerHandle(hardware_interface::JointStateHandle(jnt_names_[j], &position_states_[j],
+				&velocity_states_[j], &effort_states_[j]));
+			}
+		}
 
 		// fts_interface_.registerHandle(hardware_interface::ForceTorqueSensorHandle(
 		// 	force_torque_sensor_name_, force_torque_sensor_frame_id_, force_, torque_));
@@ -198,10 +205,11 @@ namespace xarm_control
 		robot_hw_nh.getParam("DOF", xarm_dof);
 		robot_hw_nh.getParam("xarm_robot_ip", robot_ip);
 		robot_hw_nh.getParam("joint_names", jnt_names);
+		robot_hw_nh.getParam("add_gripper", has_gripper_);
 		// robot_hw_nh.param<std::string>("force_torque_sensor_name", force_torque_sensor_name_, "ft_sensor");
 		// force_torque_sensor_frame_id_ = "ft_sensor_data";
 
-		xarm_driver_.init(robot_hw_nh, robot_ip);
+		xarm_driver_.init(robot_hw_nh, robot_ip, false);
 
 		dof_ = xarm_dof;
 		jnt_names_ = jnt_names;
@@ -409,6 +417,17 @@ namespace xarm_control
 				}
 			}
 		}
+		if (has_gripper_){
+			auto gripper_joint_states = xarm_driver_.getGripperJointStates();
+			
+			for (auto j = dof_; j < jnt_names_.size(); j++)
+			{
+				position_states_[j] = gripper_joint_states.position[j - dof_];
+				velocity_states_[j] = gripper_joint_states.velocity[j - dof_];
+				effort_states_[j] = gripper_joint_states.effort[j - dof_];
+			}
+		}
+
 	}
 
 	void XArmHW::write(const ros::Time& time, const ros::Duration& period)

@@ -72,6 +72,7 @@ namespace xarm_control
 		int curr_err_;
 		int read_code_;
 		int write_code_;
+		bool has_gripper_;
 
 		unsigned int dof_;
 		std::vector<std::string> jnt_names_;
