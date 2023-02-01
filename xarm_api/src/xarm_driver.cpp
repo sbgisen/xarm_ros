@@ -324,13 +324,6 @@ namespace xarm_api
         gripper_joint_state_msg_.name[3] = "right_outer_knuckle_joint";
         gripper_joint_state_msg_.name[4] = "right_finger_joint";
         gripper_joint_state_msg_.name[5] = "right_inner_knuckle_joint";
-        if(gripper_added_){
-            gripper_action_server_.reset(new actionlib::ActionServer<control_msgs::GripperCommandAction>(gripper_node, "gripper_action",
-            std::bind(&XArmDriver::_handle_gripper_action_goal, this, std::placeholders::_1),
-            std::bind(&XArmDriver::_handle_gripper_action_cancel, this, std::placeholders::_1),
-            false));
-            gripper_action_server_->start();
-        }
 
         bool add_gripper = false;
         gripper_added_ = false;
@@ -352,6 +345,15 @@ namespace xarm_api
                     _pub_gripper_joint_states(fabs(max_gripper_pos - init_gripper_pos_));
                 }
             }).detach();
+        }
+
+        if (gripper_added_)
+        {
+            gripper_action_server_.reset(new actionlib::ActionServer<control_msgs::GripperCommandAction>(
+                gripper_node, "gripper_action",
+                std::bind(&XArmDriver::_handle_gripper_action_goal, this, std::placeholders::_1),
+                std::bind(&XArmDriver::_handle_gripper_action_cancel, this, std::placeholders::_1), false));
+            gripper_action_server_->start();
         }
     }
 
