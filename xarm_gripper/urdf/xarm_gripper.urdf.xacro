@@ -105,7 +105,7 @@
     <limit
       lower="0"
       upper="0.85"
-      effort="50"
+      effort="1.0"
       velocity="2" />
     <dynamics
       damping="1.0"
@@ -181,9 +181,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
-    <dynamics
-      damping="1.0"
-      friction="0" />
+    <!--<dynamics-->
+    <!--  damping="1.0"-->
+    <!--  friction="0" />-->
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -240,9 +240,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
-    <dynamics
-      damping="1.0"
-      friction="0" />
+    <!--<dynamics-->
+    <!--  damping="1.0"-->
+    <!--  friction="0" />-->
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
 
@@ -256,16 +256,16 @@
           <xyz>1 0 0</xyz>
           <use_parent_model_frame>false</use_parent_model_frame>
         </axis>
-        <physics>
-          <ode>
-            <implicit_spring_damper>1</implicit_spring_damper>
-            <cfm_damping>0</cfm_damping>
-            <limit>
-              <cfm>1e-7</cfm>
-              <erp>0.8</erp>
-            </limit>
-          </ode>
-        </physics>
+        <!--<physics>-->
+        <!--  <ode>-->
+        <!--    <implicit_spring_damper>1</implicit_spring_damper>-->
+        <!--    <cfm_damping>0</cfm_damping>-->
+        <!--    <limit>-->
+        <!--      <cfm>1e-7</cfm>-->
+        <!--      <erp>0.8</erp>-->
+        <!--    </limit>-->
+        <!--  </ode>-->
+        <!--</physics>-->
       </joint>
     </gazebo>
   </xacro:if>
@@ -324,9 +324,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
-    <dynamics
-      damping="1.0"
-      friction="0" />
+    <!--<dynamics-->
+    <!--  damping="1.0"-->
+    <!--  friction="0" />-->
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -399,9 +399,9 @@
       upper="0.85"
       effort="50"
       velocity="2" />
-    <dynamics
-      damping="1.0"
-      friction="0" />
+    <!--<dynamics-->
+    <!--  damping="1.0"-->
+    <!--  friction="0" />-->
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
   <link
@@ -456,36 +456,36 @@
     <limit
       lower="0"
       upper="0.85"
-      effort="50"
+      effort="0.5"
       velocity="2" />
-    <dynamics
-      damping="1.0"
-      friction="0" />
+    <!--<dynamics-->
+    <!--  damping="1.0"-->
+    <!--  friction="0" />-->
     <mimic joint="${prefix}drive_joint" multiplier="1" offset="0" />
   </joint>
 
   <xacro:if value="${loop_joints}">
-    <gazebo> 
-      <joint name="${prefix}right_loop_joint" type="revolute"> 
-        <parent>${prefix}right_inner_knuckle</parent> 
-        <child>${prefix}right_finger</child> 
-        <pose>0 0.015 0.015 0 0 0</pose> 
-        <axis> 
-          <xyz>1 0 0</xyz> 
-          <use_parent_model_frame>false</use_parent_model_frame> 
-        </axis> 
-        <physics> 
-          <ode> 
-            <implicit_spring_damper>1</implicit_spring_damper> 
-            <cfm_damping>0</cfm_damping> 
-            <limit> 
-              <cfm>1e-7</cfm> 
-              <erp>0.8</erp> 
-            </limit> 
-          </ode> 
-        </physics> 
-      </joint> 
-    </gazebo> 
+    <gazebo>
+      <joint name="${prefix}right_loop_joint" type="revolute">
+        <parent>${prefix}right_inner_knuckle</parent>
+        <child>${prefix}right_finger</child>
+        <pose>0 0.015 0.015 0 0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <use_parent_model_frame>false</use_parent_model_frame>
+        </axis>
+        <!--<physics>-->
+        <!--  <ode>-->
+        <!--    <implicit_spring_damper>1</implicit_spring_damper>-->
+        <!--    <cfm_damping>0</cfm_damping>-->
+        <!--    <limit>-->
+        <!--      <cfm>1e-7</cfm>-->
+        <!--      <erp>0.8</erp>-->
+        <!--    </limit>-->
+        <!--  </ode>-->
+        <!--</physics>-->
+      </joint>
+    </gazebo>
   </xacro:if>
 
   <link name="${prefix}link_tcp" />
