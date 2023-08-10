@@ -333,9 +333,6 @@
         izz="0.00078345" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://xarm_description/meshes/xarm7/visual/link6.STL" />
@@ -343,9 +340,6 @@
       <material name="White" />
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://xarm_description/meshes/xarm7/collision/link6.STL" />
@@ -377,7 +371,7 @@
     name="${prefix}link7">
     <inertial>
       <origin
-        xyz="0 -0.0046 0.0153"
+        xyz="0 -0.0046 -0.0127"
         rpy="0 0 0" />
       <mass
         value="0.31468" />
@@ -390,9 +384,6 @@
         izz="0.00026032" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0.028"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://xarm_description/meshes/xarm7/visual/link7.STL" />
@@ -400,9 +391,6 @@
       <material name="Silver" />
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0.028"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://xarm_description/meshes/xarm7/collision/link7.STL" />
@@ -413,7 +401,7 @@
     name="${prefix}joint7"
     type="revolute">
     <origin
-      xyz="0.076 0.069 0"
+      xyz="0.076 0.097 0"
       rpy="-1.5708 0 0" />
     <parent
       link="${prefix}link6" />
@@ -463,7 +451,7 @@
     name="${prefix}joint_eef"
     type="fixed">
     <origin
-      xyz="0 0 0.028"
+      xyz="0 0 0"
       rpy="0 0 0" />
     <parent
       link="${prefix}link7" />
