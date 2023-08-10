@@ -167,7 +167,7 @@
     name="${prefix}link3">
     <inertial>
       <origin
-        xyz="0.0422 -0.0233 0.0913"
+        xyz="0.0422 -0.0233 -0.0097"
         rpy="0 0 0" />
       <mass
         value="0.44463" />
@@ -180,9 +180,6 @@
         izz="0.0011083" />
     </inertial>
     <visual>
-      <origin
-        xyz="0 0 0.101"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://xarm_description/meshes/xarm7/visual/link3.STL" />
@@ -190,9 +187,6 @@
       <material name="White" />
     </visual>
     <collision>
-      <origin
-        xyz="0 0 0.101"
-        rpy="0 0 0" />
       <geometry>
         <mesh
           filename="package://xarm_description/meshes/xarm7/collision/link3.STL" />
@@ -203,7 +197,7 @@
     name="${prefix}joint3"
     type="revolute">
     <origin
-      xyz="0 -0.192 0"
+      xyz="0 -0.293 0"
       rpy="1.5708 0 0" />
     <parent
       link="${prefix}link2" />
@@ -260,7 +254,7 @@
     name="${prefix}joint4"
     type="revolute">
     <origin
-      xyz="0.0525 -0.067 0.101"
+      xyz="0.0525 -0.067 0"
       rpy="1.5708 0 0" />
     <parent
       link="${prefix}link3" />
