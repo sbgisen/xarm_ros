@@ -5,34 +5,90 @@
 
     <gazebo reference="${prefix}link_base">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}link1">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}link2">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}link3">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}link4">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}link5">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}link6">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}link7">
       <selfCollide>false</selfCollide>
+      <collision>
+        <surface>
+          <contact>
+            <collide_without_contact>true</collide_without_contact>
+          </contact>
+        </surface>
+      </collision>
     </gazebo>
 
     <gazebo reference="${prefix}joint1">
