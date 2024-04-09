@@ -48,28 +48,32 @@
     </gazebo>
   </xacro:macro>
 
-  <xacro:macro name="xarm_gripper_gazebo" params="prefix">
+  <xacro:macro name="xarm_gripper_gazebo" params="prefix collide_without_contact:='false'">
 
     <gazebo reference="${prefix}xarm_gripper_base_link">
       <selfCollide>false</selfCollide>
-      <collision>
-        <surface>
-          <contact>
-            <collide_without_contact>true</collide_without_contact>
-          </contact>
-        </surface>
-      </collision>
+      <xacro:if value="${collide_without_contact}">
+        <collision>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+            </contact>
+          </surface>
+        </collision>
+      </xacro:if>
     </gazebo>
 
     <gazebo reference="${prefix}left_outer_knuckle">
       <selfCollide>false</selfCollide>
-      <collision>
-        <surface>
-          <contact>
-            <collide_without_contact>true</collide_without_contact>
-          </contact>
-        </surface>
-      </collision>
+      <xacro:if value="${collide_without_contact}">
+        <collision>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+            </contact>
+          </surface>
+        </collision>
+      </xacro:if>
     </gazebo>
 
     <gazebo reference="${prefix}left_finger">
@@ -82,35 +86,41 @@
       <maxContacts>16</maxContacts>
       <selfCollide>false</selfCollide>
       <dampingFactor>0</dampingFactor>
-      <collision>
-        <surface>
-          <contact>
-            <collide_without_contact>true</collide_without_contact>
-          </contact>
-        </surface>
-      </collision>
+      <xacro:if value="${collide_without_contact}">
+        <collision>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+            </contact>
+          </surface>
+        </collision>
+      </xacro:if>
     </gazebo>
 
     <gazebo reference="${prefix}left_inner_knuckle">
       <selfCollide>false</selfCollide>
-      <collision>
-        <surface>
-          <contact>
-            <collide_without_contact>true</collide_without_contact>
-          </contact>
-        </surface>
-      </collision>
+      <xacro:if value="${collide_without_contact}">
+        <collision>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+            </contact>
+          </surface>
+        </collision>
+      </xacro:if>
     </gazebo>
 
     <gazebo reference="${prefix}right_outer_knuckle">
       <selfCollide>false</selfCollide>
-      <collision>
-        <surface>
-          <contact>
-            <collide_without_contact>true</collide_without_contact>
-          </contact>
-        </surface>
-      </collision>
+      <xacro:if value="${collide_without_contact}">
+        <collision>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+            </contact>
+          </surface>
+        </collision>
+      </xacro:if>
     </gazebo>
 
     <gazebo reference="${prefix}right_finger">
@@ -123,24 +133,28 @@
       <maxContacts>16</maxContacts>
       <selfCollide>false</selfCollide>
       <dampingFactor>0</dampingFactor>
-      <collision>
-        <surface>
-          <contact>
-            <collide_without_contact>true</collide_without_contact>
-          </contact>
-        </surface>
-      </collision>
+      <xacro:if value="${collide_without_contact}">
+        <collision>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+            </contact>
+          </surface>
+        </collision>
+      </xacro:if>
     </gazebo>
 
     <gazebo reference="${prefix}right_inner_knuckle">
       <selfCollide>false</selfCollide>
-      <collision>
-        <surface>
-          <contact>
-            <collide_without_contact>true</collide_without_contact>
-          </contact>
-        </surface>
-      </collision>
+      <xacro:if value="${collide_without_contact}">
+        <collision>
+          <surface>
+            <contact>
+              <collide_without_contact>true</collide_without_contact>
+            </contact>
+          </surface>
+        </collision>
+      </xacro:if>
     </gazebo>
 
     <gazebo reference="${prefix}drive_joint">
