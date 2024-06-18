@@ -3,6 +3,7 @@
   <!--
   Author: Jason Peng <jason@ufactory.cc>
 -->
+  <xacro:arg name="use_cable_collision" default="false"/>
   <xacro:macro name="xarm_gripper_urdf" params="prefix:='' attach_to:='' rpy:='0 0 0' xyz:='0 0 0' loop_joints:='false' ">
     <xacro:unless value="${attach_to == ''}">
       <joint name="${prefix}gripper_fix" type="fixed">
@@ -52,14 +53,16 @@
           <box size="0.053 0.1 0.1"/>
         </geometry>
       </collision>
-      <collision>
-        <origin
-          xyz="0.03 -0.062 0.025"
-          rpy="0 0 0"/>
-        <geometry>
-          <box size="0.076 0.024 0.04"/>
-        </geometry>
-      </collision>
+      <xacro:if value="$(arg use_cable_collision)">
+        <collision>
+          <origin
+            xyz="0.03 -0.062 0.025"
+            rpy="0 0 0"/>
+          <geometry>
+            <box size="0.076 0.024 0.04"/>
+          </geometry>
+        </collision>
+      </xacro:if>
     </link>
     <link
       name="${prefix}left_outer_knuckle">
