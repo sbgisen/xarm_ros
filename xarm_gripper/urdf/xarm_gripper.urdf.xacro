@@ -52,14 +52,6 @@
         <box size="0.053 0.1 0.1"/>
       </geometry>
     </collision>
-    <collision>
-      <origin
-        xyz="0.03 -0.062 0.025"
-        rpy="0 0 0" />
-      <geometry>
-        <box size="0.076 0.024 0.04"/>
-      </geometry>
-    </collision>
   </link>
   <link
     name="${prefix}left_outer_knuckle">
@@ -147,14 +139,6 @@
         <color rgba="0.753 0.753 0.753 1.0"/>
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 -0.0224 0.04"
-        rpy="0 0 0" />
-      <geometry>
-        <box size="0.032 0.0072 0.042"/>
-      </geometry>
-    </collision>
     <collision>
       <origin
         xyz="0 -0.0154 0.036"
@@ -365,14 +349,6 @@
         <color rgba="0.753 0.753 0.753 1.0"/>
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0.0224 0.04"
-        rpy="0 0 0" />
-      <geometry>
-        <box size="0.032 0.0072 0.042"/>
-      </geometry>
-    </collision>
     <collision>
       <origin
         xyz="0 0.0154 0.036"
