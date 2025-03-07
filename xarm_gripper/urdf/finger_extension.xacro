@@ -2,6 +2,13 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:macro name="finger_extension" params="name parent *origin collide_without_contact:='false'">
 
+    <xacro:macro name="box_inertial" params="mass origin d w h">
+      <inertial>
+        <origin xyz="${origin}" rpy="0 0 0"/>
+        <mass value="${mass}"/>
+        <inertia ixx="${mass * (w ** 2 + h ** 2) / 12}" ixy="0.0" iyy="${mass * (d ** 2 + h ** 2) / 12}" ixz="0.0" iyz="0.0" izz="${mass * (w ** 2 + d ** 2) / 12}"/>
+      </inertial>
+    </xacro:macro>
     <joint name="${name}_finger_extension_joint" type="fixed">
       <xacro:insert_block name="origin"/>
       <parent link="${parent}"/>
@@ -23,13 +30,7 @@
           <box size="0.032 0.007 0.04"/>
         </geometry>
       </collision>
-      <!-- TODO: Fix inertial -->
-      <inertial>
-        <mass value="0.032"/>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="2.007e-5" ixy="-1.427e-7" iyy="2.794e-5" ixz="8.117e-6" iyz="1.581e-6"
-          izz="8.087e-6"/>
-      </inertial>
+      <xacro:box_inertial mass="0.019" origin="0 0 0" d="0.040" w="0.032" h="0.007"/>
     </link>
     <gazebo reference="${name}_finger_extension_link">
       <kp>100000.0</kp>
