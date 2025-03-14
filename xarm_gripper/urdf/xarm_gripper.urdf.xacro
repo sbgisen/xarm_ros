@@ -3,7 +3,7 @@
 <!--
   Author: Jason Peng <jason@ufactory.cc>
 -->
-  <xacro:macro name="xarm_gripper_urdf" params="prefix:='' attach_to:='' rpy:='0 0 0' xyz:='0 0 0' loop_joints:='false' use_default_finger_extension:='true'">
+  <xacro:macro name="xarm_gripper_urdf" params="prefix:='' attach_to:='' rpy:='0 0 0' xyz:='0 0 0' loop_joints:='false' use_default_finger_tip:='true'">
   <xacro:unless value="${attach_to == ''}">
     <joint name="${prefix}gripper_fix" type="fixed">
       <parent link="${attach_to}"/>
@@ -486,14 +486,14 @@
       link="${prefix}link_tcp" />
   </joint>
 
-  <xacro:if value="${use_default_finger_extension}">
-    <xacro:include filename="$(find xarm_gripper)/urdf/finger_extension.xacro"/>
-    <xacro:finger_extension name="left" parent="${prefix}left_finger">
+  <xacro:if value="${use_default_finger_tip}">
+    <xacro:include filename="$(find xarm_gripper)/urdf/finger_tip.xacro"/>
+    <xacro:finger_tip name="left" parent="${prefix}left_finger">
       <origin rpy="0 0 0" xyz="0 -0.0225 0.037"/>
-    </xacro:finger_extension>
-    <xacro:finger_extension name="right" parent="${prefix}right_finger">
+    </xacro:finger_tip>
+    <xacro:finger_tip name="right" parent="${prefix}right_finger">
       <origin rpy="0 0 0" xyz="0 0.0225 0.037"/>
-    </xacro:finger_extension>
+    </xacro:finger_tip>
   </xacro:if>
 
   </xacro:macro>
