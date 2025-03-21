@@ -3,7 +3,7 @@
 <!--
   Author: Jason Peng <jason@ufactory.cc>
 -->
-  <xacro:macro name="xarm_gripper_urdf" params="prefix:='' attach_to:='' rpy:='0 0 0' xyz:='0 0 0' loop_joints:='false' ">
+  <xacro:macro name="xarm_gripper_urdf" params="prefix:='' attach_to:='' rpy:='0 0 0' xyz:='0 0 0' loop_joints:='false' use_default_finger_tip:='true'">
   <xacro:unless value="${attach_to == ''}">
     <joint name="${prefix}gripper_fix" type="fixed">
       <parent link="${attach_to}"/>
@@ -50,14 +50,6 @@
         rpy="0 0 0" />
       <geometry>
         <box size="0.053 0.1 0.1"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin
-        xyz="0.03 -0.062 0.025"
-        rpy="0 0 0" />
-      <geometry>
-        <box size="0.076 0.024 0.04"/>
       </geometry>
     </collision>
   </link>
@@ -149,18 +141,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 -0.0224 0.04"
-        rpy="0 0 0" />
-      <geometry>
-        <box size="0.032 0.0072 0.042"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin
         xyz="0 -0.0154 0.036"
         rpy="0 0 0" />
       <geometry>
-        <box size="0.032 0.0068 0.034"/>
+        <box size="0.016 0.0068 0.034"/>
       </geometry>
     </collision>
     <collision>
@@ -367,18 +351,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0.0224 0.04"
-        rpy="0 0 0" />
-      <geometry>
-        <box size="0.032 0.0072 0.042"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin
         xyz="0 0.0154 0.036"
         rpy="0 0 0" />
       <geometry>
-        <box size="0.032 0.0068 0.034"/>
+        <box size="0.016 0.0068 0.034"/>
       </geometry>
     </collision>
     <collision>
@@ -509,6 +485,16 @@
     <child
       link="${prefix}link_tcp" />
   </joint>
+
+  <xacro:if value="${use_default_finger_tip}">
+    <xacro:include filename="$(find xarm_gripper)/urdf/finger_tip.xacro"/>
+    <xacro:finger_tip name="left" parent="${prefix}left_finger">
+      <origin rpy="0 0 0" xyz="0 -0.0225 0.037"/>
+    </xacro:finger_tip>
+    <xacro:finger_tip name="right" parent="${prefix}right_finger">
+      <origin rpy="0 0 0" xyz="0 0.0225 0.037"/>
+    </xacro:finger_tip>
+  </xacro:if>
 
   </xacro:macro>
 
